@@ -1,0 +1,70 @@
+.order-history-page .page-title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  padding: 0;
+}
+
+.order-head {
+  padding: 16px 24px;
+  background: #fdfdfd;
+  border-bottom: 1px solid var(--fk-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+}
+.order-id { font-weight: 500; color: var(--fk-blue); }
+.order-date { font-size: 12px; color: var(--fk-text-secondary); margin-top: 4px; }
+
+.badge-status {
+  padding: 4px 12px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.order-items { padding: 8px 24px; }
+.oi-row {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f9f9f9;
+  gap: 20px;
+}
+.oi-row:last-child { border-bottom: none; }
+
+.oi-img { width: 60px; height: 60px; object-fit: contain; }
+.oi-details { flex: 1; }
+.oi-name { font-weight: 500; font-size: 14px; display: block; }
+.oi-brand { font-size: 12px; color: #878787; }
+.oi-qty { font-size: 12px; margin-top: 4px; }
+.oi-price { font-weight: 500; }
+
+.order-foot {
+  padding: 16px 24px;
+  background: #fdfdfd;
+  border-top: 1px solid var(--fk-border);
+  text-align: right;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .oi-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .oi-price { margin-left: auto; }
+}
