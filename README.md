@@ -74,8 +74,14 @@ npm install
 # Run migrations and seeding
 npx prisma migrate dev --name init
 npm run db:seed
-npm run dev
+npm run start
 ```
+
+### 3. Render Blueprint Deployment (One-Click)
+- Push this repo to GitHub.
+- On Render, click **"New"** → **"Blueprint"**.
+- Select this repository.
+- It will automatically provision a **PostgreSQL database** and a **Node.js Web Service**.
 
 ### 3. Frontend Setup
 ```bash

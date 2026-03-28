@@ -84,8 +84,8 @@ git add client/src/pages/Home/
 git commit -m "feat(client): implement home page with hero grid and scroll transitions"
 
 # 19. Deployment config
-git add client/vercel.json client/package-lock.json
-git commit -m "chore: add vercel deployment config and package locks"
+git add client/vercel.json client/package-lock.json render.yaml
+git commit -m "chore: add vercel and render deployment configs"
 
 # 20. Finalization
 git add .
