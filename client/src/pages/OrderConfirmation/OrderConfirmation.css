@@ -1,0 +1,45 @@
+.confirmation-page {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.confirmation-card {
+  max-width: 600px;
+  padding: 40px;
+  text-align: center;
+}
+
+.conf-icon {
+  margin-bottom: 24px;
+}
+
+.confirmation-card h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--fk-green);
+  margin-bottom: 12px;
+}
+
+.order-id-label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.order-id-label span { color: var(--fk-blue); }
+
+.conf-msg {
+  color: var(--fk-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.conf-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .conf-actions { flex-direction: column; }
+}
