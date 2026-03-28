@@ -1,0 +1,110 @@
+.navbar {
+  background: var(--fk-blue);
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--fk-shadow);
+}
+
+.navbar-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+  max-width: 800px;
+}
+
+.navbar-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo-f {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+}
+.logo-plus {
+  font-size: 11px;
+  font-weight: 500;
+  color: white;
+  margin-top: 2px;
+}
+.logo-plus i {
+  color: #ffe500;
+}
+
+.navbar-search {
+  flex: 1;
+  background: white;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0 12px;
+}
+.navbar-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 8px 0;
+}
+.navbar-search button {
+  background: transparent;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: white;
+  font-weight: 500;
+}
+
+.navbar-user {
+  cursor: default;
+}
+
+.navbar-cart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-icon-wrap {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--fk-orange);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+  .navbar-user, .navbar-link { display: none; }
+  .navbar-left { gap: 12px; }
+  .logo-plus { display: none; }
+}
