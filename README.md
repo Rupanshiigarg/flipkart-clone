@@ -13,7 +13,7 @@ A functional, high-fidelity Flipkart clone built with **React (Vite)**, **Node.j
 ## 🛠️ Tech Stack
 - **Frontend**: React 18, Vite, React Router v6, Axios, Context API
 - **Backend**: Node.js, Express.js, Prisma ORM
-- **Database**: PostgreSQL (Hosted on Render)
+- **Database**: PostgreSQL (Hosted on Railway)
 - **Styling**: Vanilla CSS (Custom tokens for Flipkart brand colors)
 
 ---
