@@ -3,8 +3,8 @@
 A functional, high-fidelity Flipkart clone built with **React (Vite)**, **Node.js (Express)**, **Prisma ORM**, and **PostgreSQL**.
 
 ## 🚀 Live Demo
-- **Frontend**: [Vercel Link Placeholder]
-- **Backend**: [Render Link Placeholder]
+- **Frontend**: https://flipkart-clone-garg.vercel.app/
+- **Backend**: https://flipkart-clone-backend-969v.onrender.com
 
 > **Note on Render (Free Tier):** Initial load may take ~30 seconds as the backend wakes up.
 
