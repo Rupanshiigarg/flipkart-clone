@@ -40,36 +40,36 @@ function Home() {
       </div>
 
       {/* Modern Clickable Hero Grid */}
-      <div className="container hero-container">
+      <div className="container hero-container card">
         <div className="hero-grid">
           <Link to="/products?category=mobiles" className="hero-main card hover-lift">
-             <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=1200&h=600" alt="Special Offers" />
+            <img src="https://static.vecteezy.com/system/resources/previews/020/737/706/non_2x/web-banner-or-horizontal-template-design-with-special-offer-on-mobile-phones-for-advertising-concept-vector.jpg" alt="Special Offers" />
           </Link>
           <div className="hero-side-grid">
-             {/* Electronic Appliances Hero Image */}
-             <Link to="/products?category=appliances" className="hero-side-top card hover-lift">
-               <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=600&h=300" alt="Electronic Appliances" />
-             </Link>
-             <Link to="/products?category=laptops" className="hero-side-bottom card hover-lift">
-               <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=600&h=300" alt="New Laptops" />
-             </Link>
+            {/* Electronic Appliances Hero Image */}
+            <Link to="/products?category=appliances" className="hero-side-top card hover-lift">
+              <img src="https://img.freepik.com/premium-vector/home-appliances-sale-facebook-cover-template-banner-design_958026-101.jpg" alt="Electronic Appliances" />
+            </Link>
+            <Link to="/products?category=laptops" className="hero-side-bottom card hover-lift">
+              <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=600&h=300" alt="New Laptops" />
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Featured Recommendations */}
-      <div className="container featured-sections">
-        <h2 className="section-title">Best of Electronic Appliances</h2>
+      <div className="container featured-sections card">
+        <h2 className="section-title">Top Picks For You</h2>
         <div className="sections-grid">
           {categories.slice(0, 4).map(cat => (
             <Link key={cat.id} to={`/products?category=${cat.slug}`} className="featured-card card hover-lift">
-               <div className="f-card-img">
-                 <img src={cat.imageUrl} alt={cat.name} />
-               </div>
-               <div className="f-card-info">
-                 <h3>{cat.name}</h3>
-                 <p className="green">Min. 50% Off</p>
-               </div>
+              <div className="f-card-img">
+                <img src={cat.imageUrl} alt={cat.name} />
+              </div>
+              <div className="f-card-info">
+                <h3>{cat.name}</h3>
+                <p className="green">Min. 50% Off</p>
+              </div>
             </Link>
           ))}
         </div>

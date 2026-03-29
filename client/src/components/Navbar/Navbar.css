@@ -27,18 +27,21 @@
   flex-direction: column;
   line-height: 1;
 }
+
 .logo-f {
   font-size: 20px;
   font-weight: 700;
   font-style: italic;
   color: white;
 }
+
 .logo-plus {
   font-size: 11px;
   font-weight: 500;
   color: white;
   margin-top: 2px;
 }
+
 .logo-plus i {
   color: #ffe500;
 }
@@ -46,13 +49,14 @@
 .navbar-search {
   flex: 1;
   background: white;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   height: 36px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0 12px;
 }
+
 .navbar-search input {
   flex: 1;
   border: none;
@@ -60,6 +64,7 @@
   font-size: 14px;
   padding: 8px 0;
 }
+
 .navbar-search button {
   background: transparent;
 }
@@ -104,7 +109,17 @@
 }
 
 @media (max-width: 768px) {
-  .navbar-user, .navbar-link { display: none; }
-  .navbar-left { gap: 12px; }
-  .logo-plus { display: none; }
+
+  .navbar-user,
+  .navbar-link {
+    display: none;
+  }
+
+  .navbar-left {
+    gap: 12px;
+  }
+
+  .logo-plus {
+    display: none;
+  }
 }

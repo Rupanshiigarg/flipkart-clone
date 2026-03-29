@@ -1,13 +1,14 @@
 /* SOFTEN ALL EDGES FOR EVERYTHING */
-.home-page img, .card, .featured-card, .hero-grid a.card {
-  border-radius: 12px !important; /* Soften all images and containers */
+.home-page img,
+.card,
+.featured-card,
+.hero-grid a.card {
+  border-radius: 12px !important;
+  /* Soften all images and containers */
   overflow: hidden;
 }
 
-/* Category icons are small, so they stay slightly less rounded for clarity */
-.strip-icon {
-  border-radius: 4px !important; 
-}
+/* Removed old strip-icon override to allow full circular badges */
 
 /* Previous Styling with some spacing polish */
 .home-page {
@@ -17,18 +18,22 @@
 
 .category-strip {
   background: white;
-  margin-bottom: 16px;
+  max-width: 1248px; /* 1280 - 32px margins */
+  margin: 16px auto;
+  /* Floating card margins */
+  border-radius: 12px !important;
+  /* Softened edges for premium look */
   position: sticky;
-  top: 56px;
+  top: 72px; /* 56px navbar + 16px margin */
   z-index: 1000;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 0 !important; /* Keeping the nav strip baseline flat for standard UX */
-  border-bottom: 1px solid var(--fk-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* Subtle shadow for depth */
 }
 
 .is-scrolled {
   padding: 8px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .strip-inner {
@@ -41,7 +46,7 @@
 .strip-item {
   display: flex;
   flex-direction: column;
-  items-center: center;
+  align-items: center;
   transition: all 0.3s ease;
   min-width: 80px;
   text-align: center;
@@ -50,9 +55,23 @@
 .strip-icon {
   width: 64px;
   height: 64px;
-  object-fit: contain;
+  object-fit: cover !important; /* Crops images beautifully */
+  border-radius: 50% !important; /* Perfect circle */
   margin-bottom: 8px;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06); /* Subtle depth */
+  padding: 2px;
+  background: white;
+  border: 1px solid #f1f3f6;
+}
+
+.strip-item:hover .strip-icon {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.strip-item:hover .strip-label {
+  color: var(--fk-blue);
 }
 
 .is-scrolled .strip-icon {
@@ -75,10 +94,20 @@
   margin-bottom: 24px;
 }
 
-.hero-main { flex: 2.2; }
-.hero-side-grid { flex: 1; display: grid; grid-template-rows: 1fr 1fr; gap: 12px; }
+.hero-main {
+  flex: 2.2;
+}
 
-.hero-main img, .hero-side-top img, .hero-side-bottom img {
+.hero-side-grid {
+  flex: 1;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+}
+
+.hero-main img,
+.hero-side-top img,
+.hero-side-bottom img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -90,7 +119,7 @@
 
 .hover-lift:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .sections-grid {
@@ -131,11 +160,27 @@
 }
 
 @media (max-width: 992px) {
-  .hero-grid { flex-direction: column; height: auto; }
-  .hero-main { height: 300px; }
-  .hero-side-grid { height: 300px; }
+  .hero-grid {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-main {
+    height: 300px;
+  }
+
+  .hero-side-grid {
+    height: 300px;
+  }
 }
+
 @media (max-width: 480px) {
-  .strip-icon { width: 48px; height: 48px; }
-  .strip-label { font-size: 11px; }
+  .strip-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .strip-label {
+    font-size: 11px;
+  }
 }

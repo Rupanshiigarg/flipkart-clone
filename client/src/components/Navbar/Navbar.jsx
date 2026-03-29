@@ -39,7 +39,7 @@ function Navbar() {
         </div>
 
         <div className="navbar-right">
-          <span className="navbar-user">Rahul Sharma</span>
+          <span className="navbar-user">Rupanshi Garg</span>
           <Link to="/orders" className="navbar-link">Orders</Link>
           <Link to="/cart" className="navbar-cart">
             <div className="cart-icon-wrap">
