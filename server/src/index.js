@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://your-flipkart-app.vercel.app'
+    'https://flipkart-clone-mu-khaki.vercel.app'
   ],
   credentials: true
 }));
