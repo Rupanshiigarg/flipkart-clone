@@ -1,3 +1,7 @@
+const path = require('path');
+const envFile = process.env.NODE_ENV === 'production' ? '.env.production' : '.env';
+require('dotenv').config({ path: path.resolve(__dirname, '..', envFile) });
+
 const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcryptjs');
 
